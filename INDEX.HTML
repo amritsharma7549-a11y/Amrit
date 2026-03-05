@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrit's Hacker Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Matrix background -->
+    <div class="matrix-bg" id="matrixBg"></div>
+
+    <!-- Scanlines overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Login Section -->
+    <div class="login-section" id="loginSection">
+        <!-- Corner decorations -->
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>WELCOME</h1>
+            <div class="status">ONLY_AUTHORIZED_ACCESS</div>
+        </div>
+
+        <!-- Login form -->
+        <form onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    placeholder="Enter username"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-btn">Enter</button>
+            <div class="error-msg" id="errorMsg"></div>
+        </form>
+    </div>
+
+    <!-- Welcome Overlay -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-text" id="welcomeText">WELCOME TO AMRIT WEBSITE</div>
+    </div>
+
+    <!-- Documents Section -->
+    <div class="documents-section" id="documentsSection">
+        <!-- Corner decorations -->
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div class="doc-header">AMRIT'S DOCUMENTS</div>
+
+        <div id="documentsList"></div>
+
+        <button class="logout-btn" onclick="handleLogout()">LOGOUT_SYSTEM</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">THIS WEBSITE CREATED BY AMRIT</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
